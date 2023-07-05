@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFrameworks>net48;net472</TargetFrameworks>
     <Company>MatterHackers Inc.</Company>
   </PropertyGroup>
 

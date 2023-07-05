@@ -126,7 +126,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_DragDrop(object sender, DragEventArgs dragevent)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				// do a mouse up
 				widgetToSendTo.OnMouseUp(ConvertWindowsDragEventToAggMouseEvent(dragevent));
@@ -137,7 +137,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_DragEnter(object sender, DragEventArgs dragevent)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				dragFiles = GetDroppedFiles(dragevent);
 
@@ -153,7 +153,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_DragLeave(object sender, EventArgs dragevent)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				dragFiles = null;
 			}
@@ -161,7 +161,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_DragOver(object sender, DragEventArgs dragevent)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				dragFiles = GetDroppedFiles(dragevent);
 
@@ -238,7 +238,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_GotFocus(object sender, EventArgs e)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				widgetToSendTo.OnFocusChanged(e);
 				Keyboard.Clear();
@@ -249,7 +249,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_LostFocus(object sender, EventArgs e)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				focusedChild = null;
 				GuiWidget currentWidget = widgetToSendTo;
@@ -275,7 +275,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_MouseCaptureChanged(object sender, EventArgs e)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				if (widgetToSendTo.ChildHasMouseCaptured || widgetToSendTo.MouseCaptured)
 				{
@@ -286,7 +286,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_MouseDown(object sender, System.Windows.Forms.MouseEventArgs windowsMouseEvent)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				widgetToSendTo.OnMouseDown(ConvertWindowsMouseEventToAggMouseEvent(windowsMouseEvent));
 			}
@@ -294,7 +294,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_MouseLeave(object sender, EventArgs e)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				widgetToSendTo.OnMouseMove(new MouseEventArgs(MouseButtons.None, 0, -10, -10, 0));
 			}
@@ -302,7 +302,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_MouseUp(object sender, System.Windows.Forms.MouseEventArgs windowsMouseEvent)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				widgetToSendTo.OnMouseUp(ConvertWindowsMouseEventToAggMouseEvent(windowsMouseEvent));
 			}
@@ -310,7 +310,7 @@ namespace MatterHackers.Agg.UI
 
 		private void ControlToHook_MouseWheel(object sender, System.Windows.Forms.MouseEventArgs windowsMouseEvent)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				widgetToSendTo.OnMouseWheel(ConvertWindowsMouseEventToAggMouseEvent(windowsMouseEvent));
 			}
@@ -335,7 +335,7 @@ namespace MatterHackers.Agg.UI
 
 		private void FormToHook_MouseMove(object sender, System.Windows.Forms.MouseEventArgs windowsMouseEvent)
 		{
-			if (IPlatformWindow.EnablePlatformWindowInput)
+			if (PlatformWindowSettings.EnablePlatformWindowInput)
 			{
 				// TODO: Remove short term workaround for automation issues where mouse events fire differently if mouse is within window region
 				if (!EnableInputHook)

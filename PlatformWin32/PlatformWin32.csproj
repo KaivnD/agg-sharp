@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net6.0-windows</TargetFramework>
+		<TargetFrameworks>net48;net6.0-windows</TargetFrameworks>
 		<Company>MatterHackers Inc.</Company>
 		<AssemblyName>agg_platform_win32</AssemblyName>
 		<RootNamespace>agg_platform_win32</RootNamespace>
@@ -39,6 +39,9 @@
 		<ProjectReference Include="..\ImageProcessing\ImageProcessing.csproj" />
 		<ProjectReference Include="..\RenderOpenGl\RenderOpenGl.csproj" />
 		<ProjectReference Include="..\VectorMath\VectorMath.csproj" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+	  <Reference Include="Microsoft.VisualBasic" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Update="StyleCop.Analyzers" Version="1.1.118" />

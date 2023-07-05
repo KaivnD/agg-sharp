@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net48;netstandard2.0</TargetFrameworks>
     <Company>MatterHackers Inc.</Company>
     <ShaderOutputPath>$(BaseIntermediateOutputPath)</ShaderOutputPath>
     <ShaderContentIncludePath>Shaders</ShaderContentIncludePath>

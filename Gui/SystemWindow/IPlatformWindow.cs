@@ -31,11 +31,13 @@ using MatterHackers.VectorMath;
 
 namespace MatterHackers.Agg.UI
 {
-	public interface IPlatformWindow
+	public class PlatformWindowSettings
 	{
-		// This must be set to false when doing parallel UI testing.
-		public static bool EnablePlatformWindowInput { get; set; } = true;
+        public static bool EnablePlatformWindowInput { get; set; } = true;
+    }
 
+    public interface IPlatformWindow
+	{
 		string Caption { get; set; }
 
 		int TitleBarHeight { get; }

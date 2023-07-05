@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net48;netstandard2.0</TargetFrameworks>
     <ShaderOutputPath>$(BaseIntermediateOutputPath)</ShaderOutputPath>
     <ShaderContentIncludePath>Shaders</ShaderContentIncludePath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>

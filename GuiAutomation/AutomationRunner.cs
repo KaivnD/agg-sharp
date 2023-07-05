@@ -1395,10 +1395,10 @@ namespace MatterHackers.GuiAutomation
 			var resetEvent = new AutoResetEvent(false);
 
 			// Ignore real user input.
-			IPlatformWindow.EnablePlatformWindowInput = false;
+			PlatformWindowSettings.EnablePlatformWindowInput = false;
 
-			// On load, release the reset event
-			initialSystemWindow.Load += (s, e) =>
+            // On load, release the reset event
+            initialSystemWindow.Load += (s, e) =>
 			{
 				resetEvent.Set();
 			};

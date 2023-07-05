@@ -5,7 +5,7 @@
     <Copyright>Copyright 2018</Copyright>
     <AssemblyTitle>IxMilia.ThreeMf</AssemblyTitle>
     <Authors>IxMilia</Authors>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFrameworks>net48;netstandard1.3</TargetFrameworks>
     <AssemblyName>IxMilia.ThreeMf</AssemblyName>
     <PackageId>IxMilia.ThreeMf</PackageId>
     <PackageTags>CAD;3MF</PackageTags>

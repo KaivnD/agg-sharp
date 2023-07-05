@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net48;net6.0</TargetFrameworks>
     <Company>MatterHackers Inc.</Company>
     <ReleaseVersion>2.20.12</ReleaseVersion>
+	<LangVersion>11.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
